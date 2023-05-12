@@ -11,6 +11,10 @@
 		8745633D2A0EBA0D0073DBBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745633C2A0EBA0D0073DBBB /* ContentView.swift */; };
 		8745633F2A0EBA0F0073DBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8745633E2A0EBA0F0073DBBB /* Assets.xcassets */; };
 		874563422A0EBA0F0073DBBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 874563412A0EBA0F0073DBBB /* Preview Assets.xcassets */; };
+		8745634E2A0EBBD00073DBBB /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745634D2A0EBBD00073DBBB /* SongModel.swift */; };
+		874563502A0EBDA50073DBBB /* SongManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8745634F2A0EBDA50073DBBB /* SongManager.swift */; };
+		874563522A0EBDE60073DBBB /* SongData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874563512A0EBDE60073DBBB /* SongData.swift */; };
+		874563542A0EC1590073DBBB /* SongRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874563532A0EC1590073DBBB /* SongRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		8745633C2A0EBA0D0073DBBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8745633E2A0EBA0F0073DBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		874563412A0EBA0F0073DBBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8745634D2A0EBBD00073DBBB /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
+		8745634F2A0EBDA50073DBBB /* SongManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongManager.swift; sourceTree = "<group>"; };
+		874563512A0EBDE60073DBBB /* SongData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongData.swift; sourceTree = "<group>"; };
+		874563532A0EC1590073DBBB /* SongRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				8745633A2A0EBA0D0073DBBB /* testApp.swift */,
-				8745633C2A0EBA0D0073DBBB /* ContentView.swift */,
+				874563482A0EBB850073DBBB /* Model */,
+				8745634A2A0EBB960073DBBB /* View */,
+				8745634C2A0EBBA00073DBBB /* Controller */,
 				8745633E2A0EBA0F0073DBBB /* Assets.xcassets */,
 				874563402A0EBA0F0073DBBB /* Preview Content */,
 			);
@@ -65,6 +75,32 @@
 				874563412A0EBA0F0073DBBB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		874563482A0EBB850073DBBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8745634D2A0EBBD00073DBBB /* SongModel.swift */,
+				874563512A0EBDE60073DBBB /* SongData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8745634A2A0EBB960073DBBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8745633C2A0EBA0D0073DBBB /* ContentView.swift */,
+				874563532A0EC1590073DBBB /* SongRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8745634C2A0EBBA00073DBBB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8745634F2A0EBDA50073DBBB /* SongManager.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8745634E2A0EBBD00073DBBB /* SongModel.swift in Sources */,
+				874563542A0EC1590073DBBB /* SongRow.swift in Sources */,
 				8745633D2A0EBA0D0073DBBB /* ContentView.swift in Sources */,
+				874563502A0EBDA50073DBBB /* SongManager.swift in Sources */,
+				874563522A0EBDE60073DBBB /* SongData.swift in Sources */,
 				8745633B2A0EBA0D0073DBBB /* testApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +315,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +345,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
