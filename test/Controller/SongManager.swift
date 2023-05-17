@@ -21,20 +21,6 @@ class SongManager: ObservableObject {
         print(heart.count)
     }
     
-    //PUT FUNCTIONS HERE
-
-
-//    func filterMusic(genre: String) -> [SongModel] {
-//        var filtered: [SongModel] = []
-//        for song in self.songs {
-//            if song.genre == genre {
-//                filtered.append(song)
-//            }
-//        }
-//        return filtered
-//    }
-    
-    
     
      let songs : [SongModel] =
     
@@ -61,22 +47,48 @@ class SongManager: ObservableObject {
          
         SongModel(artistNameTop25: artistNameTop25[10], songNameTop25: songNameTop25[10], releaseDateTop25: releaseDateTop25[10], artworkUrl100Top25: artworkUrl100Top25[10], contentAdvisoryRating: contentAdvisoryRating[10], genre: genre[10], heart: heart[10]),
          
-        SongModel(artistNameTop25: artistNameTop25[11], songNameTop25: songNameTop25[11], releaseDateTop25: releaseDateTop25[11], artworkUrl100Top25: artworkUrl100Top25[11], contentAdvisoryRating: contentAdvisoryRating[11], genre: genre[11], heart: heart[11])]
-//        SongModel(artistNameTop25: artistNameTop25[12], songNameTop25: songNameTop25[12], releaseDateTop25: releaseDateTop25[12], artworkUrl100Top25: artworkUrl100Top25[12], contentAdvisoryRating: contentAdvisoryRating[12], genre: genre[12]),
-//        SongModel(artistNameTop25: artistNameTop25[13], songNameTop25: songNameTop25[13], releaseDateTop25: releaseDateTop25[13], artworkUrl100Top25: artworkUrl100Top25[13], contentAdvisoryRating: contentAdvisoryRating[13], genre: genre[13]),
-//        SongModel(artistNameTop25: artistNameTop25[14], songNameTop25: songNameTop25[14], releaseDateTop25: releaseDateTop25[14], artworkUrl100Top25: artworkUrl100Top25[14], contentAdvisoryRating: contentAdvisoryRating[14], genre: genre[14]),
-//        SongModel(artistNameTop25: artistNameTop25[15], songNameTop25: songNameTop25[15], releaseDateTop25: releaseDateTop25[15], artworkUrl100Top25: artworkUrl100Top25[15], contentAdvisoryRating: contentAdvisoryRating[15], genre: genre[15]),
-//        SongModel(artistNameTop25: artistNameTop25[16], songNameTop25: songNameTop25[16], releaseDateTop25: releaseDateTop25[16], artworkUrl100Top25: artworkUrl100Top25[16], contentAdvisoryRating: contentAdvisoryRating[16], genre: genre[16]),
-//        SongModel(artistNameTop25: artistNameTop25[17], songNameTop25: songNameTop25[17], releaseDateTop25: releaseDateTop25[17], artworkUrl100Top25: artworkUrl100Top25[17], contentAdvisoryRating: contentAdvisoryRating[17], genre: genre[17]),
-//        SongModel(artistNameTop25: artistNameTop25[18], songNameTop25: songNameTop25[18], releaseDateTop25: releaseDateTop25[18], artworkUrl100Top25: artworkUrl100Top25[18], contentAdvisoryRating: contentAdvisoryRating[18], genre: genre[18]),
-//        SongModel(artistNameTop25: artistNameTop25[19], songNameTop25: songNameTop25[19], releaseDateTop25: releaseDateTop25[19], artworkUrl100Top25: artworkUrl100Top25[19], contentAdvisoryRating: contentAdvisoryRating[19], genre: genre[19]),
-//        SongModel(artistNameTop25: artistNameTop25[20], songNameTop25: songNameTop25[20], releaseDateTop25: releaseDateTop25[20], artworkUrl100Top25: artworkUrl100Top25[20], contentAdvisoryRating: contentAdvisoryRating[20], genre: genre[20]),
-//        SongModel(artistNameTop25: artistNameTop25[21], songNameTop25: songNameTop25[21], releaseDateTop25: releaseDateTop25[21], artworkUrl100Top25: artworkUrl100Top25[21], contentAdvisoryRating: contentAdvisoryRating[21], genre: genre[21]),
-//        SongModel(artistNameTop25: artistNameTop25[22], songNameTop25: songNameTop25[22], releaseDateTop25: releaseDateTop25[22], artworkUrl100Top25: artworkUrl100Top25[22], contentAdvisoryRating: contentAdvisoryRating[22], genre: genre[22]),
-//        SongModel(artistNameTop25: artistNameTop25[23], songNameTop25: songNameTop25[23], releaseDateTop25: releaseDateTop25[23], artworkUrl100Top25: artworkUrl100Top25[23], contentAdvisoryRating: contentAdvisoryRating[23], genre: genre[23]),
-//        SongModel(artistNameTop25: artistNameTop25[24], songNameTop25: songNameTop25[24], releaseDateTop25: releaseDateTop25[24], artworkUrl100Top25: artworkUrl100Top25[24], contentAdvisoryRating: contentAdvisoryRating[24], genre: genre[24]),
-//        SongModel(artistNameTop25: artistNameTop25[25], songNameTop25: songNameTop25[25], releaseDateTop25: releaseDateTop25[25], artworkUrl100Top25: artworkUrl100Top25[25], contentAdvisoryRating: contentAdvisoryRating[25], genre: genre[25])
-//    ]
+        SongModel(artistNameTop25: artistNameTop25[11], songNameTop25: songNameTop25[11], releaseDateTop25: releaseDateTop25[11], artworkUrl100Top25: artworkUrl100Top25[11], contentAdvisoryRating: contentAdvisoryRating[11], genre: genre[11], heart: heart[11])
+//         SongModel(artistNameTop25: artistNameTop25[12], songNameTop25: songNameTop25[12], releaseDateTop25: releaseDateTop25[12], artworkUrl100Top25: artworkUrl100Top25[12], contentAdvisoryRating: contentAdvisoryRating[12], genre: genre[12], heart: heart[12]),
+//
+//         SongModel(artistNameTop25: artistNameTop25[13], songNameTop25: songNameTop25[13], releaseDateTop25: releaseDateTop25[13], artworkUrl100Top25: artworkUrl100Top25[13], contentAdvisoryRating: contentAdvisoryRating[13], genre: genre[13], heart: heart[14]),
+//
+//
+//         SongModel(artistNameTop25: artistNameTop25[14], songNameTop25: songNameTop25[14], releaseDateTop25: releaseDateTop25[14], artworkUrl100Top25: artworkUrl100Top25[14], contentAdvisoryRating: contentAdvisoryRating[14], genre: genre[14], heart: heart[14]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[15], songNameTop25: songNameTop25[15], releaseDateTop25: releaseDateTop25[15], artworkUrl100Top25: artworkUrl100Top25[15], contentAdvisoryRating: contentAdvisoryRating[15], genre: genre[15], heart: heart[15]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[16], songNameTop25: songNameTop25[16], releaseDateTop25: releaseDateTop25[16], artworkUrl100Top25: artworkUrl100Top25[16], contentAdvisoryRating: contentAdvisoryRating[16], genre: genre[16], heart: heart[16]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[17], songNameTop25: songNameTop25[17], releaseDateTop25: releaseDateTop25[17], artworkUrl100Top25: artworkUrl100Top25[17], contentAdvisoryRating: contentAdvisoryRating[17], genre: genre[17], heart: heart[17]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[18], songNameTop25: songNameTop25[18], releaseDateTop25: releaseDateTop25[18], artworkUrl100Top25: artworkUrl100Top25[18], contentAdvisoryRating: contentAdvisoryRating[18], genre: genre[18], heart: heart[18]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[19], songNameTop25: songNameTop25[19], releaseDateTop25: releaseDateTop25[19], artworkUrl100Top25: artworkUrl100Top25[19], contentAdvisoryRating: contentAdvisoryRating[19], genre: genre[19], heart: heart[19]),
+//
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[20], songNameTop25: songNameTop25[20], releaseDateTop25: releaseDateTop25[20], artworkUrl100Top25: artworkUrl100Top25[20], contentAdvisoryRating: contentAdvisoryRating[20], genre: genre[20], heart: heart[20]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[21], songNameTop25: songNameTop25[21], releaseDateTop25: releaseDateTop25[21], artworkUrl100Top25: artworkUrl100Top25[21], contentAdvisoryRating: contentAdvisoryRating[21], genre: genre[21], heart: heart[21]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[22], songNameTop25: songNameTop25[22], releaseDateTop25: releaseDateTop25[22], artworkUrl100Top25: artworkUrl100Top25[22], contentAdvisoryRating: contentAdvisoryRating[22], genre: genre[22], heart: heart[22]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[23], songNameTop25: songNameTop25[23], releaseDateTop25: releaseDateTop25[23], artworkUrl100Top25: artworkUrl100Top25[23], contentAdvisoryRating: contentAdvisoryRating[23], genre: genre[23], heart: heart[23]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[24], songNameTop25: songNameTop25[24], releaseDateTop25: releaseDateTop25[24], artworkUrl100Top25: artworkUrl100Top25[24], contentAdvisoryRating: contentAdvisoryRating[24], genre: genre[24], heart: heart[24]),
+//
+//
+//        SongModel(artistNameTop25: artistNameTop25[25], songNameTop25: songNameTop25[25], releaseDateTop25: releaseDateTop25[25], artworkUrl100Top25: artworkUrl100Top25[25], contentAdvisoryRating: contentAdvisoryRating[25], genre: genre[25], heart: heart[25])
+    ]
 }
 
 

@@ -58,7 +58,7 @@ struct ContentView: View {
                             .offset(x:-70, y: 20)
                             .foregroundColor(.white)
                         
-                        Text("11 songs")
+                        Text("25 songs")
                             .frame(width: 200, height: 50, alignment: .topLeading)
                             .offset(x:-70, y: 0)
                             .foregroundColor(Color(.systemGray2))
