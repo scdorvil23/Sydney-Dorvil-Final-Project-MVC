@@ -12,7 +12,7 @@ struct SongRow: View {
     
     @ObservedObject var songManager : SongManager
    
-    @State var song = SongModel(artistNameTop25: artistNameTop25[0], songNameTop25: songNameTop25[0], releaseDateTop25: releaseDateTop25[0], artworkUrl100Top25: artworkUrl100Top25[0], contentAdvisoryRating: contentAdvisoryRating[0], genre: genre[0])
+    @State var song = SongModel(artistNameTop25: artistNameTop25[0], songNameTop25: songNameTop25[0], releaseDateTop25: releaseDateTop25[0], artworkUrl100Top25: artworkUrl100Top25[0], contentAdvisoryRating: contentAdvisoryRating[0], genre: genre[0], heart: heart[0])
     
     var body: some View {
         HStack(spacing:10) {
@@ -50,13 +50,24 @@ struct SongRow: View {
                         
                         Spacer()
                         
+//                        Image(systemName: "heart.fill")
+//                            .foregroundColor(.red)
+//                            .frame(alignment: .trailing)
+//                            .scaledToFit()
+//
+//
+                        
+                        
                         Image(systemName: "heart.fill")
-                            .foregroundColor(.red)
+                            .foregroundColor(saveColor(count: song.heart))
                             .frame(alignment: .trailing)
+                        
                             .scaledToFit()
-                       
-                                
-                                
+                        
+                            .onTapGesture {
+                                song.heart = changeCount(count: song.heart)
+                            }
+                        
                                 
                                 
                             }

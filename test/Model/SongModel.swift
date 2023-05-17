@@ -15,7 +15,7 @@ struct SongModel: Identifiable {
     let artworkUrl100Top25: String
     let contentAdvisoryRating: String
     let genre: String
-//    v heart: Bool
+    var heart: Int
     let explicit = true
     
 }
