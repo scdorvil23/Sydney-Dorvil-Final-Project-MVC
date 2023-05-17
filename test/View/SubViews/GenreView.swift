@@ -10,7 +10,7 @@ import SwiftUI
 struct GenreView: View {
     
     var body: some View {
-        Text("Loaded Rap will go here")
+        Text("Filtered Rap could go here")
     }
 }
 

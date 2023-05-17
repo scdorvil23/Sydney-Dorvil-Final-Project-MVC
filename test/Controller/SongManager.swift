@@ -10,6 +10,8 @@ import SwiftUI
 
 class SongManager: ObservableObject {
     
+
+    
     
     init(){
         print(genre.count)
@@ -20,6 +22,9 @@ class SongManager: ObservableObject {
         print(contentAdvisoryRating.count)
         print(heart.count)
     }
+   
+    
+    
     
     
      let songs : [SongModel] =

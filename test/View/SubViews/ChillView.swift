@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChillView: View {
     var body: some View {
-        Text("Chill")
+        Text("Filtered Chill could go here")
     }
 }
 

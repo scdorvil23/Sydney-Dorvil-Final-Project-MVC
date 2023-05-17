@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CountryView: View {
     var body: some View {
-        Text("country")
+        Text("Filtered Country could go here")
     }
 }
 

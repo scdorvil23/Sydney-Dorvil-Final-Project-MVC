@@ -1,5 +1,5 @@
 //
-//  RBView.swift
+//  PopView.swift
 //  test
 //
 //  Created by Sydney Dorvil23 on 5/16/23.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct RBView: View {
+struct PopView: View {
     var body: some View {
-        Text("RB")
+        Text("Filtered Pop could go here")
     }
 }
 
-struct RBView_Previews: PreviewProvider {
+struct PopView_Previews: PreviewProvider {
     static var previews: some View {
-        RBView()
+        PopView()
     }
 }

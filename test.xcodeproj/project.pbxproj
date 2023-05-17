@@ -102,13 +102,9 @@
 		874563482A0EBB850073DBBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8745636D2A14809C0073DBBB /* Components */,
 				8745634D2A0EBBD00073DBBB /* SongModel.swift */,
 				874563512A0EBDE60073DBBB /* SongData.swift */,
-				874563572A13D8820073DBBB /* PrimaryButton.swift */,
-				874563612A13DA4C0073DBBB /* RBButton.swift */,
-				874563632A13DA540073DBBB /* ChillButton.swift */,
-				874563652A13DA5F0073DBBB /* CountryButton.swift */,
-				874563672A13DF9E0073DBBB /* PopButton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,13 +112,9 @@
 		8745634A2A0EBB960073DBBB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8745636E2A1480C50073DBBB /* SubViews */,
 				8745633C2A0EBA0D0073DBBB /* ContentView.swift */,
 				874563532A0EC1590073DBBB /* SongRow.swift */,
-				874563592A13D9570073DBBB /* GenreView.swift */,
-				8745635B2A13D9E80073DBBB /* RBView.swift */,
-				8745635D2A13D9F00073DBBB /* ChillView.swift */,
-				8745635F2A13D9F80073DBBB /* CountryView.swift */,
-				874563692A13FDB70073DBBB /* PopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +126,30 @@
 				8745636B2A1466E80073DBBB /* FunctionsFile.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8745636D2A14809C0073DBBB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				874563672A13DF9E0073DBBB /* PopButton.swift */,
+				874563652A13DA5F0073DBBB /* CountryButton.swift */,
+				874563632A13DA540073DBBB /* ChillButton.swift */,
+				874563612A13DA4C0073DBBB /* RBButton.swift */,
+				874563572A13D8820073DBBB /* PrimaryButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8745636E2A1480C50073DBBB /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				874563692A13FDB70073DBBB /* PopView.swift */,
+				8745635F2A13D9F80073DBBB /* CountryView.swift */,
+				8745635D2A13D9F00073DBBB /* ChillView.swift */,
+				8745635B2A13D9E80073DBBB /* RBView.swift */,
+				874563592A13D9570073DBBB /* GenreView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

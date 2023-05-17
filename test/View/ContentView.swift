@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
+    
+    
     @StateObject var songManager: SongManager = SongManager()
     @State var song = SongModel(artistNameTop25: artistNameTop25[0], songNameTop25: songNameTop25[0], releaseDateTop25: releaseDateTop25[0], artworkUrl100Top25: artworkUrl100Top25[0], contentAdvisoryRating: contentAdvisoryRating[0], genre: genre[0], heart: heart[0])
+   
+    
     
     @State var rap = false
     @State var rb = false
