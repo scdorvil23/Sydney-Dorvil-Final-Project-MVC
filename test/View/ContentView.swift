@@ -10,12 +10,22 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var songManager: SongManager = SongManager()
-    @State var save = false
-
+    @State var rap = false
+    @State var rb = false
+    @State var pop = false
+    @State var chill = false
+    @State var country = false
+    
+    var rap1: String = "Rap"
+    
+    
+    
+    
     
     var pic = Image(systemName: "plus")
     let accentColor = Color("myColor")
     let backgroundGradient = LinearGradient (colors: [Color.accentColor, Color.black, Color.black], startPoint: .top, endPoint: .center)
+    @State var selectedGenre = "Not Filtered"
     
     
     
@@ -53,16 +63,10 @@ struct ContentView: View {
                                 .offset(x:11, y: 3)
                                 .foregroundColor(.white)
                                 .background(.indigo)
-                            //                            .fontWeight(.bold)
+                            
                                 .cornerRadius(30)
                                 .offset(x:20, y: 0)
-                                .onTapGesture {
-                                    save.toggle()
-                                    
-                                }
-                            
-                            // saveAll(count: heartColor, mode: colorScheme, save: Bool)
-                            
+                         
                             
                             Image(systemName: "arrow.down.circle")
                                 .resizable()
@@ -96,104 +100,151 @@ struct ContentView: View {
                         
                         VStack() {
                             HStack(spacing: 15){
-                                Text("Rap")
-                                    .bold()
-                                    .frame(width: 50, height: 28, alignment: .topLeading)
-                                    .offset(x:11, y: 3)
-                                    .foregroundColor(.white)
-                                    .background(.indigo)
-                                    .cornerRadius(30)
-                                    .offset(x:20, y: 0)
                                 
-                                
-                                
-                                Text("R&B")
-                                    .bold()
-                                    .frame(width: 55, height: 28, alignment: .topLeading)
-                                    .offset(x:11, y: 3)
-                                    .foregroundColor(.white)
-                                    .background(.indigo)
-                                    .cornerRadius(30)
-                                    .offset(x:20, y: 0)
-                                
-                                
-                                
-                                
-                                
-                                Text("Pop")
-                                    .bold()
-                                    .frame(width: 50, height: 28, alignment: .topLeading)
-                                    .offset(x:11, y: 3)
-                                    .foregroundColor(.white)
-                                    .background(.indigo)
-                                    .cornerRadius(30)
-                                    .offset(x:20, y: 0)
-                                
-                                
-                                
-                                
-                                
-                                Text("Chill")
-                                    .bold()
-                                    .frame(width: 57, height: 28, alignment: .topLeading)
-                                    .offset(x:11, y: 3)
-                                    .foregroundColor(.white)
-                                    .background(.indigo)
-                                    .cornerRadius(30)
-                                    .offset(x:20, y: 0)
-                                
-                                
-                                Text("Country")
-                                    .bold()
-                                    .frame(width: 87, height: 28, alignment: .topLeading)
-                                    .offset(x:11, y: 3)
-                                    .foregroundColor(.white)
-                                    .background(.indigo)
-                                    .cornerRadius(30)
-                                    .offset(x:20, y: 0)
-                                
-                                
-                            }
-                            .offset(x:-17)
-                        }
-                        
-                        VStack {
-                            HStack {
-                                
-                                Image("plus")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50)
-                                    .offset(x:-100, y: -70)
-                                    .alignmentGuide(.leading) { _ in
+                                Button( action: {
+                                    rap.toggle()
+                                    rb.toggle()
+                                    pop.toggle()
+                                    chill.toggle()
+                                    country.toggle()
+                                    
+                                }) {
+                                    
+                                    NavigationLink {
+                                        GenreView()
                                         
-                                        -25
+                                        
+                                        
+                                    } label: {
+                                        PrimaryButton(
+                                            text: "Rap"
+                                            
+                                        )
+                                        
                                     }
-                                
-                                
-                                
-                                
-                                
+                                    
+                                    
+                                    NavigationLink {
+                                        RBView()
+                                        
+                                    } label: {
+                                        RBButton(
+                                            text: "R&B"
+                                            
+                                        )
+                                        
+                                    }
+                                    
+                                    NavigationLink {
+                                        PopView()
+                                        
+                                    } label: {
+                                        RBButton(
+                                            text: "Pop"
+                                            
+                                        )
+                                        
+                                    }
+                                    
+                                    NavigationLink {
+                                        ChillView()
+                                        
+                                    } label: {
+                                        ChillButton(
+                                            text: "Chill"
+                                            
+                                        )
+                                        
+                                    }
+                                    
+                                    
+                                    NavigationLink {
+                                        CountryView()
+                                        
+                                    } label: {
+                                        CountryButton(
+                                            text: "Country"
+                                            
+                                        )
+                                    }
+                                }
+                                .offset(x:-27)
+                            }
+                            
+                            VStack {
+                             
+                                    
+                                }
                             }
                         }
-                    }
                     
-                    List(songManager.songs) { song in
-                        SongRow(songManager: songManager, song: song)
+                    // END OF UPPER LEVEL UI
+                    
+                    
+                    
+//                    func filterMusic(genre: String) -> [SongModel] {
+//                        var filtered: [SongModel] = []
+//                        for song in self.songs {
+//                            if song.genre == genre {
+//                                filtered.append(song)
+//                            }
+//                        }
+//                        return filtered
+//                    }
+//
+                    
+                    
+//                    NavigationLink {
+//                        GenreView()
+//
+//
+//
+//                    } label: {
+//                        PrimaryButton(
+//                            text: "Rap"
+//
+//                        )
+//
+//                    }
+                    
+                    
                         
-                    
-                        
+                        List(songManager.songs) { song in
+                            SongRow(songManager: songManager, song: song)
+                            
+                            
+//                            if selectedGenre == "All Genres" {
+//                                ForEach(songManager.songs) { song in
+//                                    SongRow(songManager: songManager, song: song)
+//                                }
+//                            } else {
+//
+//                                    ForEach(songManager.filterMusic(genre: selectedGenre))
+//                                    { song in
+//                                        SongRow(songManager: songManager, song: song)
+//
+//
+//                                }
+//                            }
+                        }
                     }
-                    
-                    
-                    
-                    
                 }
             }
         }
     }
-}
+                                        
 
+                                
+                        
+                       
+                           
+                                
+                                
+                                
+                                
+                               
+                                
+                                
                       
                       
                     

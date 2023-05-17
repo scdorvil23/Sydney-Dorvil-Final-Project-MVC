@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SongManager: ObservableObject {
+    
+    
     init(){
         print(genre.count)
         print(artistNameTop25.count)
@@ -18,8 +21,19 @@ class SongManager: ObservableObject {
     }
     
     //PUT FUNCTIONS HERE
+
+
+//    func filterMusic(genre: String) -> [SongModel] {
+//        var filtered: [SongModel] = []
+//        for song in self.songs {
+//            if song.genre == genre {
+//                filtered.append(song)
+//            }
+//        }
+//        return filtered
+//    }
     
-    
+  
     
     
      let songs : [SongModel] =
@@ -52,3 +66,5 @@ class SongManager: ObservableObject {
 //        SongModel(artistNameTop25: artistNameTop25[25], songNameTop25: songNameTop25[25], releaseDateTop25: releaseDateTop25[25], artworkUrl100Top25: artworkUrl100Top25[25], contentAdvisoryRating: contentAdvisoryRating[25], genre: genre[25])
 //    ]
 }
+
+

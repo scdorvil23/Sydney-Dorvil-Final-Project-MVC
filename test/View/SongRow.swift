@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SongRow: View {
     
+    
     @ObservedObject var songManager : SongManager
+   
     @State var song = SongModel(artistNameTop25: artistNameTop25[0], songNameTop25: songNameTop25[0], releaseDateTop25: releaseDateTop25[0], artworkUrl100Top25: artworkUrl100Top25[0], contentAdvisoryRating: contentAdvisoryRating[0], genre: genre[0])
     
     var body: some View {
@@ -40,8 +42,6 @@ struct SongRow: View {
                         
                         
                         
-                        
-                        
                         Text(song.artistNameTop25)
                             .fontWeight(.heavy)
                             .foregroundColor(.secondary)
@@ -50,13 +50,11 @@ struct SongRow: View {
                         
                         Spacer()
                         
-                        
                         Image(systemName: "heart.fill")
                             .foregroundColor(.red)
                             .frame(alignment: .trailing)
                             .scaledToFit()
-                            .onTapGesture {
-                                //       hearts = updateCount(count: hearts)
+                       
                                 
                                 
                                 
@@ -69,7 +67,6 @@ struct SongRow: View {
                 
             }
             
-//            .scrollContentBackground(.hidden)
             
             .listRowBackground(Color.black)
             
@@ -77,7 +74,6 @@ struct SongRow: View {
             
         }
     }
-}
        
             
         
