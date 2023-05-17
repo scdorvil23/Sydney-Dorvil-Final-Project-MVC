@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SongRow: View {
     
+    var shape2 = "heart.fill"
+    
     
     @ObservedObject var songManager : SongManager
    
@@ -59,7 +61,7 @@ struct SongRow: View {
                         
                         
                         Image(systemName: "heart.fill")
-                            .foregroundColor(saveColor(count: song.heart))
+                            .foregroundColor(savecolor(song.heart))
                             .frame(alignment: .trailing)
                         
                             .scaledToFit()
@@ -67,15 +69,10 @@ struct SongRow: View {
                             .onTapGesture {
                                 song.heart = changeCount(count: song.heart)
                             }
-                        
-                                
-                                
+                      
                             }
                     }
                 }
-                
-                
-                
             }
             
             
